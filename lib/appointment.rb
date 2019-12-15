@@ -1,3 +1,4 @@
+require 'pry'
 class Appointment 
 
     @@all = []
@@ -14,5 +15,7 @@ class Appointment
    def self.all
     @@all
    end
+
+   
 
 end
