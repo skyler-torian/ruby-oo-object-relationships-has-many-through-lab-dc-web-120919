@@ -24,4 +24,18 @@ class Doctor
         Appointment.new(date, patient, self)
     end
 
+    def appointments
+        binding.pry
+        Appointment.all.select |appointment|
+        appointment.doctor == self
+    
+    end
+
+    def patients
+        appointments.map do |appointment|
+            appointment.patient
+        end
+    end
+
+
 end
